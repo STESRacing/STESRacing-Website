@@ -126,210 +126,177 @@
         }
     </style>
 
-    <!-- ______________________________________________________________________ 
+    <!-- ______________________________________________________________________
         newly added css code                                                     -->
 
     <style>
-         @media screen and (max-width: 1200px){
-            .last_part{
-                margin-top: 1300px;
-            }
-        }
-        @media screen and (max-width: 661px) {
-            
-            .header-dark
-            {
-                margin-bottom: 0px;
-            }
-            
+         .page2 {
+             background: #000;
+             padding: 30px 24px 80px;
+         }
 
-            .row2 {
-                margin-top: 450px;
-                margin-bottom: 200px;
-                background-color: #00ff00;
-                
+         .row2 {
+             width: 100%;
+             max-width: 1200px;
+             margin: 0 auto 70px;
+             display: grid;
+             grid-template-columns: repeat(auto-fit, minmax(220px, 240px));
+             justify-content: center;
+             gap: 36px 40px;
+         }
 
-            }
+         .nav1title {
+             grid-column: 1 / -1;
+             height: auto;
+             margin-bottom: 10px;
+             text-align: center;
+         }
 
-            .row2 .column2 {
-                margin-top: 30px;
-                margin-bottom: 0px;
-                margin-right: 45px;
-            }
-            .nav1title
-            {
-               margin-top: 0px;
+         .title_heading {
+             color: #fff;
+             margin: 0;
+             padding: 18px 0 10px;
+             font-family: Georgia, "Times New Roman", serif;
+             font-size: clamp(32px, 4vw, 45px);
+             font-weight: 900;
+         }
 
-                text-align: center;
-            }
-            .last_part
-            {
-                margin-top: 4100px;
-            }
+         .column2 {
+             position: relative;
+             width: 240px;
+             height: 280px;
+             border-radius: 20px;
+             overflow: hidden;
+             background: #111;
+             box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45);
+             transition: transform 0.25s ease, box-shadow 0.25s ease;
+         }
 
-        }
-        @media screen and (max-width: 450px){
+         .row2 .column2:hover {
+             transform: translateY(-8px);
+             box-shadow: 0 16px 34px rgba(0, 0, 0, 0.65);
+         }
 
-            .nav1title
-            {
-                /* margin-bottom: 80px; */
+         .row2.featured-team {
+             grid-template-columns: repeat(3, 240px);
+             margin-bottom: 70px;
+         }
 
-                text-align: center;
-                
-                
-            }
-            .row2 .column2 {
-               
-                margin-bottom: 0px;
-                
-            }
+         .row2.faculty-row {
+             grid-template-columns: repeat(2, 240px);
+         }
 
+         .row2.final-team-row {
+             grid-template-columns: repeat(3, 240px);
+         }
 
-        }
-        @media screen and (max-width: 486px){
+         .page2 img {
+             display: block;
+             width: 240px;
+             height: 280px;
+             object-fit: cover;
+             border-radius: 20px;
+         }
 
-            .nav1title{
+         .image_text {
+             position: absolute;
+             inset: 0;
+             z-index: 2;
+             display: flex;
+             flex-direction: column;
+             justify-content: flex-end;
+             align-items: center;
+             padding: 18px 12px;
+             border-radius: 20px;
+             background: linear-gradient(to top, rgba(0, 0, 0, 0.92), rgba(0, 0, 0, 0.05) 65%);
+             opacity: 1;
+             text-align: center;
+             transition: background 0.25s ease;
+         }
 
-                margin-bottom: 5px;
-                /* margin-top: 20px; */
-                /* padding-bottom: 20px; */
+         .person_name {
+             width: 100%;
+             margin: 0;
+             color: #fff;
+             font-family: Calibri, sans-serif;
+             font-size: 21px;
+             font-weight: 900;
+             line-height: 1.15;
+             text-align: center;
+         }
 
-            }
-            .row2 .column2 {
-               
-               margin-bottom: 0px;
-               
-           }
+         .info_person {
+             margin: 8px 0 0;
+             color: #ebd196;
+             font-weight: 900;
+             text-align: center;
+         }
 
-        }
-        @media screen and (max-width: 977px){
-            .last_part{
-                margin-top: 2000px;
-            }
-        }
-        @media screen and (max-width: 660px){
-            .last_part{
-                margin-top: 3200px;
-            }
-        }
-       
+         @media (max-width: 600px) {
+             .page2 {
+                 padding: 20px 12px 50px;
+             }
 
-        /* _______________________________ above css for responsive ____________________________ */
+             .row2 {
+                 grid-template-columns: repeat(auto-fit, minmax(150px, 180px));
+                 gap: 24px 16px;
+                 margin-bottom: 45px;
+             }
 
-        .nav1title {
-            background-color: rgb(0, 0, 0);
-            height: 100px;
-            width: 100%;
-            /* margin-left: 50px; */
-            text-align: center;
-        }
+             .row2.featured-team {
+                 grid-template-columns: repeat(3, 180px);
+             }
 
-        .title_heading {
-            color: white;
-            text-align: center;
-            margin-top: 0px;
-            padding-top: 35px;
-            font-weight: 900;
-            font-size: 45px;
-            font-family: Georgia, 'Times New Roman', Times, serif;
-        }
+             .row2.faculty-row {
+                 grid-template-columns: repeat(2, 180px);
+             }
 
-        .page2 img {
+             .row2.final-team-row {
+                 grid-template-columns: repeat(3, 180px);
+             }
 
-            width: 100%;
-            height: 280px;
-            border-radius: 20px;
-            align-items: center;
-        }
+             .column2,
+             .page2 img {
+                 width: 180px;
+                 height: 210px;
+             }
 
-        /* ____________________________________  */
+             .title_heading {
+                 font-size: 30px;
+             }
+         }
 
-        .row2 {
+         @media (max-width: 400px) {
+             .row2.featured-team {
+                 grid-template-columns: repeat(3, 112px);
+             }
 
-            width: 100%;
-            height: 280px;
-            padding-bottom: 70px;
-            background-color: rgb(0, 0, 0);
-            display: flex;
+             .row2.faculty-row {
+                 grid-template-columns: repeat(2, 150px);
+             }
 
-            justify-content: center;
-            flex-wrap: wrap;
+             .row2.final-team-row {
+                 grid-template-columns: repeat(3, 112px);
+             }
 
-            margin-bottom: 150px;
-            
-        }
+             .row2.final-team-row .column2,
+             .row2.final-team-row img {
+                 width: 112px;
+                 height: 150px;
+             }
 
-        .column2 {
-            height: 280px;
-            width: 240px;
-            margin-left: 40px;
-            margin-right: 40px;
+             .row2.faculty-row .column2,
+             .row2.faculty-row img {
+                 width: 150px;
+                 height: 190px;
+             }
 
-            margin-top: 45px;
-            border-radius: 20px;
-            margin-bottom: 20px;
-
-            
-
-        }
-
-        .row2 .column2:hover {
-            transform: scale(1.2);
-            transition: transform 1s;
-        }
-
-
-        /* _______________________________________________________ */
-
-
-
-        .image_text {
-            width: 240px;
-            height: 280px;
-            /* background-color: blueviolet; */
-            opacity: 0;
-            position: absolute;
-            text-align: center;
-            border-radius: 20px;
-            font-family: Calibri;
-
-
-        }
-
-        .person_name {
-            /* text-decoration: solid; */
-            color: rgb(253, 251, 251);
-            margin-top: 140px;
-            /* margin-left: 10px; */
-            font-weight: 900;
-            text-align: center;
-            transition: cubic-bezier(0.19, 1, 0.22, 1);
-            font-family: Calibri;
-
-
-
-        }
-
-        .info_person {
-            margin-top: 20px;
-            text-align: center;
-            color: #000000;
-            font-weight: 900;
-            color: #ebd196;
-
-        }
-
-        .column2:hover .image_text {
-            opacity: 0.7;
-            text-align: justify;
-            color: #000000;
-            font-size: 20px;
-            font-weight: 100;
-            font-family: "Times New Roman", Times, serif;
-            border-radius: 20px;
-            background-color: #6c757d;
-
-        }
+             .row2.featured-team .column2,
+             .row2.featured-team img {
+                 width: 112px;
+                 height: 150px;
+             }
+         }
 
 
     </style>
@@ -398,137 +365,106 @@
 
 
     <div class="page2">
-
-
-
-
-        <div class="row2">
-
+        <div class="row2 faculty-row">
             <div class="nav1title">
-
-                <h1 class="title_heading">FACULTY ADVISORS </h1>
-
+                <h1 class="title_heading">FACULTY ADVISORS</h1>
             </div>
 
             <div class="column2">
-
                 <div class="image_text">
                     <h3 class="person_name">Dr. Dhananjay Khankal</h3>
-                    <!-- <p class="info_person"></p> -->
                 </div>
-                <div>
-                    <img src='assets/img/dhananjay sir new.jpg'>
-                </div>
+                <img src="assets/img/dhananjay sir new.jpg" alt="Dr. Dhananjay Khankal">
             </div>
 
             <div class="column2">
-
                 <div class="image_text">
                     <h3 class="person_name">Dr. Amar Pandhare</h3>
-                    <!-- <p class="info_person"></p> -->
                 </div>
-                <div>
-                    <img src='assets/img/amar_sir.JPG'>
-                </div>
+                <img src="assets/img/amar_sir.JPG" alt="Dr. Amar Pandhare">
             </div>
-
-
-
         </div>
 
-        <!-- __________________________________________________  -->
-
-
-
-
-
-
-        <div class="row2">
-
+        <div class="row2 featured-team">
             <div class="nav1title">
-
-                <h1 class="title_heading">MEET OUR TEAM </h1>
-
+                <h1 class="title_heading">MEET OUR TEAM</h1>
             </div>
 
             <div class="column2">
-
                 <div class="image_text">
-                    <h3 class="person_name">Om Tapkir</h3>
-                    <p class="info_person"></p>
+                    <h3 class="person_name">Tanvi Bedare</h3>
                 </div>
-                <div>
-                    <img src='assets/img/Om Tapkir.jpg'>
-                </div>
+                <img src="assets/img/Tanvi Bedare.jpeg" alt="Tanvi Bedare">
             </div>
 
             <div class="column2">
-
                 <div class="image_text">
-                    <h3 class="person_name">Pranit Dixit</h3>
-                    <p class="info_person"></p>
+                    <h3 class="person_name">Bhushan Doke</h3>
                 </div>
-                <div>
-                    <img src='assets/img/Pranit Dixit.jpg'>
-                </div>
+                <img src="assets/img/Bhushan Doke.jpeg" alt="Bhushan Doke">
             </div>
 
             <div class="column2">
-
                 <div class="image_text">
-                    <h3 class="person_name">Anushka Dumbre</h3>
-                    <p class="info_person"></p>
+                    <h3 class="person_name">Taha Manasawala</h3>
                 </div>
-                <div>
-                    <img src='assets/img/Anushka Dumbre.jpg'>
+                <img src="assets/img/Taha Manasawala.jpeg" alt="Taha Manasawala">
+            </div>
+        </div>
+
+        <div class="row2">
+            <div class="column2">
+                <div class="image_text">
+                    <h3 class="person_name">Satvik Waghmare</h3>
                 </div>
+                <img src="assets/img/Satvik Waghmare.jpeg" alt="Satvik Waghmare">
             </div>
 
+            <div class="column2">
+                <div class="image_text">
+                    <h3 class="person_name">Nandan Shimpi</h3>
+                </div>
+                <img src="assets/img/Nandan Shimpi.jpeg" alt="Nandan Shimpi">
+            </div>
 
+            <div class="column2">
+                <div class="image_text">
+                    <h3 class="person_name">Shravani Halle</h3>
+                </div>
+                <img src="assets/img/Shravani Halle.jpeg" alt="Shravani Halle">
+            </div>
+
+            <div class="column2">
+                <div class="image_text">
+                    <h3 class="person_name">Arpita Kichambare</h3>
+                </div>
+                <img src="assets/img/Arpita Kichambare.jpeg" alt="Arpita Kichambare">
+            </div>
 
         </div>
 
-
-
-        <div class="row2">
-
-
+        <div class="row2 final-team-row">
             <div class="column2">
-
                 <div class="image_text">
-                    <h3 class="person_name">Manish Manerikar</h3>
-                    <p class="info_person"></p>
+                    <h3 class="person_name">Zaara Khan</h3>
                 </div>
-                <div>
-                    <img src='assets/img/Manish Manerikar.jpg'>
-                </div>
+                <img src="assets/img/Zaara Khan.jpeg" alt="Zaara Khan">
             </div>
 
             <div class="column2">
-
                 <div class="image_text">
-                    <h3 class="person_name">Kapil Malgaonkar</h3>
-                    <p class="info_person"></p>
+                    <h3 class="person_name">Sanskruti Tandore</h3>
                 </div>
-                <div>
-                    <img src='assets/img/Kapil Malgaonkar.jpg'>
-                </div>
+                <img src="assets/img/Sanskruti Tandore.jpeg" alt="Sanskruti Tandore">
             </div>
 
-
-            <!-- ___________________________________________________  -->
-
-
-
-
-
-        <!-- <div class="row2">
-
-
-            
-
-        </div> -->
-
+            <div class="column2">
+                <div class="image_text">
+                    <h3 class="person_name">Omkar Mirkale</h3>
+                </div>
+                <img src="assets/img/Omkar Mirkale.png" alt="Omkar Mirkale">
+            </div>
+        </div>
     </div>
 
 
@@ -540,7 +476,7 @@
 
     <div class="last_part">
 
-        <div class="footer-dark" style="padding-top:0;padding-bottom:0;background-color:rgb(0,0,0);margin-top: 800px;">
+        <div class="footer-dark" style="padding-top:0;padding-bottom:0;background-color:rgb(0,0,0);">
             <footer>
                 <div class="container" style="padding-top:25px;padding-bottom:25px;">
                     <div class="row">
@@ -577,7 +513,7 @@
             </footer>
         </div>
     </div>
-    
+
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/script.min.js"></script>
